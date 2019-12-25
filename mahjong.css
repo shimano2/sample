@@ -1,0 +1,56 @@
+body{
+	font-size: 10pt;	
+}
+
+h1{
+	font-size: 14pt;	
+}
+
+h2{
+	font-size: 12pt;	
+	color: white;
+	background-color : blue;
+}
+
+h3{
+	font-size: 11pt;
+}
+
+h4{
+	font-size: 10pt;	
+}
+
+.title{
+	text-align:center;
+}
+td{
+	font-size: 10pt;
+}
+
+td.black{
+	background-color:black;
+	font-weight:bold;
+	color:white;
+}
+
+td.hai{
+	vertical-align:bottom;
+}
+
+td.button{
+	text-align:center;
+}
+
+img.mini{
+	height:20pt;
+}
+
+img.answer{
+	height:20pt;
+}
+
+.important{
+	color:red;
+}
+
+input[type="radio"] {font-size:x-large;height:30px;width:30px;}

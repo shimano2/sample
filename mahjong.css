@@ -25,7 +25,7 @@ h4{
 }
 
 td{
-	font-size: 18pt;
+	font-size: 16pt;
 	text-align:center;
 }
 
@@ -55,4 +55,4 @@ img.answer{
 	color:red;
 }
 
-input[type="radio"] {font-size:x-large;height:30px;width:30px;}
+input[type="radio"] {font-size:x-large;height:20px;width:20px;}

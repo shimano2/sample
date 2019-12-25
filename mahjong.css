@@ -1,30 +1,31 @@
 body{
-	font-size: 10pt;	
+	font-size: 18pt;	
 }
 
 h1{
-	font-size: 14pt;	
+	font-size: 18pt;	
 }
 
 h2{
-	font-size: 12pt;	
+	font-size: 18pt;	
 	color: white;
 	background-color : blue;
 }
 
 h3{
-	font-size: 11pt;
+	font-size: 18pt;
 }
 
 h4{
-	font-size: 10pt;	
+	font-size: 18pt;	
 }
 
 .title{
 	text-align:center;
 }
 td{
-	font-size: 10pt;
+	font-size: 18pt;
+	text-align:center;
 }
 
 td.black{

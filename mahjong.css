@@ -1,11 +1,18 @@
 body{
-	font-size: 12pt;	
+	font-size: 11pt;	
 }
 
 h1{
-	font-size: 18pt;	
+	font-size: 14pt;	
 }
 
+h2{
+	font-size: 12pt;	
+}
+
+h3{
+	font-size: 12pt;	
+}
 .title{
 	text-align:center;
 }

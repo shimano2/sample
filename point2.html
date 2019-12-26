@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>中国語講座</title>
+<link rel="stylesheet" href="mahjong.css" type="text/css">
+<style type="text/css">
+</style>
+<meta name="viewport" content="width=380px" >
+</head>
+<body>
+<h1>■点数一覧表β版</h1>
+
+<div>
+<input name="select1" type="radio" value="1" onchange="funcChange()">親
+<input name="select1" type="radio" value="2" onchange="funcChange()" checked="checked">子
+</div>
+<div>
+<input name="select2" type="radio" value="1" onchange="funcChange()">ピンフ
+<input name="select2" type="radio" value="2" onchange="funcChange()" checked="checked">鳴きあり
+<input name="select2" type="radio" value="3" onchange="funcChange()">鳴きなし
+</div>
+<div>
+<input name="select3" type="radio" value="1" onchange="funcChange()" checked="checked">ロン
+<input name="select3" type="radio" value="2" onchange="funcChange()" >ツモ
+</div>
+
+<div id="point_table_1">
+<table border="0" width="100%">
+<colgroup>
+<col width="20" >
+<col width="90">
+<col width="90">
+<col width="90">
+<col width="90">
+</colgroup>
+<thead>
+<tr><td>翻</td><td>20符</td><td>30符</td><td>40符</td><td>50符</td></tr>
+</thead>
+<tbody>
+<tr class="20p"><td>20符</td><td>-                </td><td>2000<br>(700all)</td><td>3900<br>(1300all)</td><td>7700<br>(2600all)</td></tr>
+<tr class="30p"><td>30符</td><td>1500<br>(500all)</td><td>2900<br>(1000all)</td><td>5800<br>(2000all)</td><td>11600(12000)<br>(4000all)</td></tr>
+<tr class="40p"><td>40符</td><td>2000<br>(700all)</td><td>3900<br>(1000all)</td><td>7700<br>(2600all)</td><td>12000<br>(4000all)</td></tr>
+<tr class="50p"><td>50符</td><td>2400<br>(800all)</td><td>4800<br>(1600all)</td><td>9600<br>(3200all)</td><td>12000<br>(4000all)</td></tr>
+</tbody>
+</table>
+
+
+<br>
+5翻：満貫(12,000)、6翻：跳満(12,000)、8翻：倍満(24,000)、11翻：3倍満(36,000)、13翻：数え役満(48,000)<br>
+<br>
+</div>
+
+<div id="point_table_2">
+<table border="0" width="100%">
+<colgroup>
+<col width="20" >
+<col width="90">
+<col width="90">
+<col width="90">
+<col width="90">
+</colgroup>
+<thead>
+<tr><td>翻</td><td>20符</td><td>30符</td><td>40符</td><td>50符</td></tr>
+</thead>
+<tbody>
+<tr class="20p"><td>１翻</td><td>-</td><td>1300<br>(400-700)</td><td>2600<br>(700-1300)</td><td>5200<br>(1300-2600)</td></tr>
+<tr class="30p"><td>２翻</td><td>1000<br>(300-500)</td><td>2000<br>(500-1000)</td><td>3900<br>(1000-2000)</td><td>7700(8000)<br>(2000-4000)</td></tr>
+<tr class="40p"><td>３翻</td><td>1300<br>(400-700)</td><td>2600<br>(700-1300)</td><td>5200<br>(1300-2600)</td><td>8000<br>(2000-4000)</td></tr>
+<tr class="50p"><td>４翻</td><td>1600<br>(400-800)</td><td>3200<br>(800-1600)</td><td>6400<br>(1600-3200</td><td>8000<br>(2000-4000)</td></tr>
+</tbody>
+</table>
+
+<br>
+5翻：満貫(8,000)、6翻：跳満(12,000)、8翻：倍満(16,000)、11翻：3倍満(24,000)、13翻：数え役満(32,000)<br>
+<br>
+</div>
+
+<script type="text/javascript">
+function funcChange() {
+
+  var elems1 = document.getElementsByName("select1");
+  var elems2 = document.getElementsByName("select2");
+  var elems3 = document.getElementsByName("select3");
+  
+  document.getElementById("point_table_1").style.display="none";
+  document.getElementById("point_table_2").style.display="none";
+  
+  if(elems1[0].checked){
+    document.getElementById("point_table_1").style.display="block";
+  }else{
+    document.getElementById("point_table_2").style.display="block";
+  }
+  resetBackColor();
+  //changeBackColor("30p","#00ffff");
+  
+  if(elems2[0].checked && elems3[1].checked){
+    changeBackColor("20p","#00ffff");
+  }else if(elems2[2].checked && elems3[0].checked){
+    changeBackColor("40p","#00ffff");
+  }else{
+    changeBackColor("30p","#00ffff");
+  }
+  
+  return;
+}
+
+function resetBackColor(){
+  changeBackColor("20p","#ffffff");
+  changeBackColor("30p","#ffffff");
+  changeBackColor("40p","#ffffff");
+  changeBackColor("50p","#ffffff");
+}
+
+function changeBackColor(className,colorValue){
+  var elements = document.getElementsByClassName(className);
+  for(i=0;i<elements.length;i++){
+    elements[i].style.backgroundColor = colorValue;
+  }
+}
+
+funcChange();
+</script>
+</body>
+</html>
